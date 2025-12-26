@@ -30,6 +30,10 @@ final class DependencyContainer: ObservableObject {
         UserDefaultsStatisticsAdapter()
     }()
     
+    private lazy var historyPersistence: HistoryPersistencePort = {
+        UserDefaultsHistoryAdapter()
+    }()
+    
     // MARK: - Use Cases
     
     private lazy var timerUseCase: TimerUseCaseProtocol = {
@@ -38,7 +42,8 @@ final class DependencyContainer: ObservableObject {
             notificationPort: notificationPort,
             soundPort: soundPort,
             settingsPersistence: settingsPersistence,
-            statisticsPersistence: statisticsPersistence
+            statisticsPersistence: statisticsPersistence,
+            historyPersistence: historyPersistence
         )
     }()
     
@@ -50,6 +55,7 @@ final class DependencyContainer: ObservableObject {
         SettingsUseCase(
             settingsPersistence: settingsPersistence,
             statisticsPersistence: statisticsPersistence,
+            historyPersistence: historyPersistence,
             notificationPort: notificationPort
         )
     }()

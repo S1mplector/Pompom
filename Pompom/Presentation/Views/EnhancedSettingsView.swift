@@ -442,6 +442,16 @@ struct StatisticsPane: View {
             }
             
             Section {
+                ProductivityChartsView(
+                    history: settingsViewModel.history,
+                    dailyGoal: settingsViewModel.dailyGoal
+                )
+                .frame(height: 320)
+            } header: {
+                Text("Weekly Progress")
+            }
+            
+            Section {
                 Button(role: .destructive) {
                     settingsViewModel.resetStatistics()
                 } label: {

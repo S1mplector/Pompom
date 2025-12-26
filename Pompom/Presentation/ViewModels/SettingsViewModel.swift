@@ -18,6 +18,7 @@ final class SettingsViewModel: ObservableObject {
     @Published var dailyGoal: Int
     
     @Published private(set) var statistics: SessionStatistics
+    @Published private(set) var history: SessionHistory
     
     private let settingsUseCase: SettingsUseCaseProtocol
     private var cancellables = Set<AnyCancellable>()
@@ -41,6 +42,7 @@ final class SettingsViewModel: ObservableObject {
         self.showTimeInMenuBar = defaultSettings.showTimeInMenuBar
         self.dailyGoal = defaultSettings.dailyGoal
         self.statistics = .empty
+        self.history = settingsUseCase.loadHistory()
         
         setupSubscriptions()
     }
@@ -57,6 +59,13 @@ final class SettingsViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] statistics in
                 self?.statistics = statistics
+            }
+            .store(in: &cancellables)
+        
+        settingsUseCase.historyPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] history in
+                self?.history = history
             }
             .store(in: &cancellables)
         

@@ -713,21 +713,25 @@ struct StatsTabView: View {
                 
                 // Daily summary message
                 DailySummaryMessage(
-                    completedSessions: settingsViewModel.statistics.totalWorkSessions,
+                    completedSessions: settingsViewModel.history.todayStats.workSessions,
                     goalSessions: settingsViewModel.dailyGoal,
                     streak: settingsViewModel.statistics.currentStreak
                 )
                 
-                // Weekly heatmap
-                WeeklyHeatmap(dailyData: generateWeekData())
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(Color(nsColor: .controlBackgroundColor))
-                    )
+                // Real weekly heatmap from history
+                RealtimeWeeklyHeatmap(
+                    history: settingsViewModel.history,
+                    dailyGoal: settingsViewModel.dailyGoal
+                )
+                
+                // Streak indicator
+                StreakIndicator(
+                    currentStreak: settingsViewModel.statistics.currentStreak,
+                    longestStreak: settingsViewModel.statistics.longestStreak
+                )
             }
         }
-        .frame(maxHeight: 350)
+        .frame(maxHeight: 380)
         .padding(.vertical, 8)
     }
     
@@ -736,17 +740,6 @@ struct StatsTabView: View {
             return "\(minutes)m"
         }
         return "\(minutes / 60)h"
-    }
-    
-    private func generateWeekData() -> [WeeklyHeatmap.DayData] {
-        let days = ["M", "T", "W", "T", "F", "S", "S"]
-        let goal = settingsViewModel.dailyGoal
-        
-        return days.enumerated().map { index, day in
-            let isToday = Calendar.current.component(.weekday, from: Date()) == (index + 2) % 7 + 1
-            let sessions = isToday ? settingsViewModel.statistics.totalWorkSessions : Int.random(in: 0...goal)
-            return WeeklyHeatmap.DayData(day: day, sessions: sessions, goal: goal)
-        }
     }
 }
 

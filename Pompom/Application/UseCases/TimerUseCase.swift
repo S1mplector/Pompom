@@ -19,10 +19,13 @@ final class TimerUseCase: TimerUseCaseProtocol {
     private let soundPort: SoundPort
     private let settingsPersistence: SettingsPersistencePort
     private let statisticsPersistence: StatisticsPersistencePort
+    private let historyPersistence: HistoryPersistencePort
     
     private let sessionSubject: CurrentValueSubject<PomodoroSession, Never>
     private var completedWorkSessions: Int = 0
     private var cancellables = Set<AnyCancellable>()
+    private var currentTaskId: UUID?
+    private var currentTaskTitle: String?
     
     var sessionPublisher: AnyPublisher<PomodoroSession, Never> {
         sessionSubject.eraseToAnyPublisher()
@@ -41,13 +44,15 @@ final class TimerUseCase: TimerUseCaseProtocol {
         notificationPort: NotificationPort,
         soundPort: SoundPort,
         settingsPersistence: SettingsPersistencePort,
-        statisticsPersistence: StatisticsPersistencePort
+        statisticsPersistence: StatisticsPersistencePort,
+        historyPersistence: HistoryPersistencePort
     ) {
         self.timerPort = timerPort
         self.notificationPort = notificationPort
         self.soundPort = soundPort
         self.settingsPersistence = settingsPersistence
         self.statisticsPersistence = statisticsPersistence
+        self.historyPersistence = historyPersistence
         
         let settings = settingsPersistence.load()
         let initialSession = PomodoroSession(type: .work, duration: settings.workDuration)
@@ -55,6 +60,11 @@ final class TimerUseCase: TimerUseCaseProtocol {
         
         setupTimerSubscription()
         setupSettingsSubscription()
+    }
+    
+    func setCurrentTask(id: UUID?, title: String?) {
+        self.currentTaskId = id
+        self.currentTaskTitle = title
     }
     
     private func setupTimerSubscription() {
@@ -139,12 +149,26 @@ final class TimerUseCase: TimerUseCaseProtocol {
         timerPort.stop()
         
         let completedSession = sessionSubject.value
+        
+        // Update statistics
         var statistics = statisticsPersistence.load()
         statistics = statistics.withCompletedSession(
             type: completedSession.type,
             duration: completedSession.duration
         )
         statisticsPersistence.save(statistics)
+        
+        // Record to history
+        let historyRecord = CompletedSession(
+            type: completedSession.type,
+            duration: completedSession.duration,
+            completedAt: Date(),
+            taskId: currentTaskId,
+            taskTitle: currentTaskTitle
+        )
+        var history = historyPersistence.load()
+        history.addCompletedSession(historyRecord)
+        historyPersistence.save(history)
         
         let settings = currentSettings
         
