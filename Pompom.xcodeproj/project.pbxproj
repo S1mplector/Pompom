@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAA00001001 /* PompomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00001000 /* PompomApp.swift */; };
+		AAA00002001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA00002000 /* Assets.xcassets */; };
+		AAA00003001 /* PomodoroSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00003000 /* PomodoroSession.swift */; };
+		AAA00004001 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00004000 /* Task.swift */; };
+		AAA00005001 /* TimerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00005000 /* TimerSettings.swift */; };
+		AAA00006001 /* SessionStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00006000 /* SessionStatistics.swift */; };
+		AAA00007001 /* TimerPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00007000 /* TimerPort.swift */; };
+		AAA00008001 /* NotificationPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00008000 /* NotificationPort.swift */; };
+		AAA00009001 /* SoundPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00009000 /* SoundPort.swift */; };
+		AAA00010001 /* PersistencePort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00010000 /* PersistencePort.swift */; };
+		AAA00011001 /* TimerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00011000 /* TimerUseCase.swift */; };
+		AAA00012001 /* TaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00012000 /* TaskUseCase.swift */; };
+		AAA00013001 /* SettingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00013000 /* SettingsUseCase.swift */; };
+		AAA00014001 /* SystemTimerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00014000 /* SystemTimerAdapter.swift */; };
+		AAA00015001 /* UserNotificationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00015000 /* UserNotificationAdapter.swift */; };
+		AAA00016001 /* SystemSoundAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00016000 /* SystemSoundAdapter.swift */; };
+		AAA00017001 /* UserDefaultsSettingsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00017000 /* UserDefaultsSettingsAdapter.swift */; };
+		AAA00018001 /* UserDefaultsTaskAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00018000 /* UserDefaultsTaskAdapter.swift */; };
+		AAA00019001 /* UserDefaultsStatisticsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00019000 /* UserDefaultsStatisticsAdapter.swift */; };
+		AAA00020001 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00020000 /* DependencyContainer.swift */; };
+		AAA00021001 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00021000 /* TimerViewModel.swift */; };
+		AAA00022001 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00022000 /* SettingsViewModel.swift */; };
+		AAA00023001 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00023000 /* TaskViewModel.swift */; };
+		AAA00024001 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00024000 /* MenuBarView.swift */; };
+		AAA00025001 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00025000 /* TaskListView.swift */; };
+		AAA00026001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00026000 /* SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AAA00000000 /* Pompom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pompom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAA00001000 /* PompomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PompomApp.swift; sourceTree = "<group>"; };
+		AAA00002000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAA00003000 /* PomodoroSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroSession.swift; sourceTree = "<group>"; };
+		AAA00004000 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		AAA00005000 /* TimerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettings.swift; sourceTree = "<group>"; };
+		AAA00006000 /* SessionStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStatistics.swift; sourceTree = "<group>"; };
+		AAA00007000 /* TimerPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPort.swift; sourceTree = "<group>"; };
+		AAA00008000 /* NotificationPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPort.swift; sourceTree = "<group>"; };
+		AAA00009000 /* SoundPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPort.swift; sourceTree = "<group>"; };
+		AAA00010000 /* PersistencePort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencePort.swift; sourceTree = "<group>"; };
+		AAA00011000 /* TimerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerUseCase.swift; sourceTree = "<group>"; };
+		AAA00012000 /* TaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUseCase.swift; sourceTree = "<group>"; };
+		AAA00013000 /* SettingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUseCase.swift; sourceTree = "<group>"; };
+		AAA00014000 /* SystemTimerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTimerAdapter.swift; sourceTree = "<group>"; };
+		AAA00015000 /* UserNotificationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationAdapter.swift; sourceTree = "<group>"; };
+		AAA00016000 /* SystemSoundAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSoundAdapter.swift; sourceTree = "<group>"; };
+		AAA00017000 /* UserDefaultsSettingsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSettingsAdapter.swift; sourceTree = "<group>"; };
+		AAA00018000 /* UserDefaultsTaskAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsTaskAdapter.swift; sourceTree = "<group>"; };
+		AAA00019000 /* UserDefaultsStatisticsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStatisticsAdapter.swift; sourceTree = "<group>"; };
+		AAA00020000 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		AAA00021000 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		AAA00022000 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		AAA00023000 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		AAA00024000 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		AAA00025000 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		AAA00026000 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AAA00027000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAA00028000 /* Pompom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pompom.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAAF0001000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAAG0000000 = {
+			isa = PBXGroup;
+			children = (
+				AAAG0001000 /* Pompom */,
+				AAAG0002000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAAG0001000 /* Pompom */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00001000 /* PompomApp.swift */,
+				AAA00002000 /* Assets.xcassets */,
+				AAA00027000 /* Info.plist */,
+				AAA00028000 /* Pompom.entitlements */,
+				AAAG0003000 /* Domain */,
+				AAAG0007000 /* Application */,
+				AAAG0009000 /* Infrastructure */,
+				AAAG0012000 /* Presentation */,
+			);
+			path = Pompom;
+			sourceTree = "<group>";
+		};
+		AAAG0002000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00000000 /* Pompom.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAAG0003000 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AAAG0004000 /* Entities */,
+				AAAG0005000 /* ValueObjects */,
+				AAAG0006000 /* Ports */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AAAG0004000 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00003000 /* PomodoroSession.swift */,
+				AAA00004000 /* Task.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		AAAG0005000 /* ValueObjects */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00005000 /* TimerSettings.swift */,
+				AAA00006000 /* SessionStatistics.swift */,
+			);
+			path = ValueObjects;
+			sourceTree = "<group>";
+		};
+		AAAG0006000 /* Ports */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00007000 /* TimerPort.swift */,
+				AAA00008000 /* NotificationPort.swift */,
+				AAA00009000 /* SoundPort.swift */,
+				AAA00010000 /* PersistencePort.swift */,
+			);
+			path = Ports;
+			sourceTree = "<group>";
+		};
+		AAAG0007000 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AAAG0008000 /* UseCases */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AAAG0008000 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00011000 /* TimerUseCase.swift */,
+				AAA00012000 /* TaskUseCase.swift */,
+				AAA00013000 /* SettingsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		AAAG0009000 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00020000 /* DependencyContainer.swift */,
+				AAAG0010000 /* Adapters */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		AAAG0010000 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00014000 /* SystemTimerAdapter.swift */,
+				AAA00015000 /* UserNotificationAdapter.swift */,
+				AAA00016000 /* SystemSoundAdapter.swift */,
+				AAA00017000 /* UserDefaultsSettingsAdapter.swift */,
+				AAA00018000 /* UserDefaultsTaskAdapter.swift */,
+				AAA00019000 /* UserDefaultsStatisticsAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		AAAG0012000 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				AAAG0013000 /* ViewModels */,
+				AAAG0014000 /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		AAAG0013000 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00021000 /* TimerViewModel.swift */,
+				AAA00022000 /* SettingsViewModel.swift */,
+				AAA00023000 /* TaskViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AAAG0014000 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00024000 /* MenuBarView.swift */,
+				AAA00025000 /* TaskListView.swift */,
+				AAA00026000 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAAN0000000 /* Pompom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAAC0002000 /* Build configuration list for PBXNativeTarget "Pompom" */;
+			buildPhases = (
+				AAAS0000000 /* Sources */,
+				AAAF0001000 /* Frameworks */,
+				AAAR0000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pompom;
+			productName = Pompom;
+			productReference = AAA00000000 /* Pompom.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAAP0000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AAAN0000000 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AAAC0000000 /* Build configuration list for PBXProject "Pompom" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAAG0000000;
+			productRefGroup = AAAG0002000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAAN0000000 /* Pompom */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAAR0000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA00002001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAAS0000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA00001001 /* PompomApp.swift in Sources */,
+				AAA00003001 /* PomodoroSession.swift in Sources */,
+				AAA00004001 /* Task.swift in Sources */,
+				AAA00005001 /* TimerSettings.swift in Sources */,
+				AAA00006001 /* SessionStatistics.swift in Sources */,
+				AAA00007001 /* TimerPort.swift in Sources */,
+				AAA00008001 /* NotificationPort.swift in Sources */,
+				AAA00009001 /* SoundPort.swift in Sources */,
+				AAA00010001 /* PersistencePort.swift in Sources */,
+				AAA00011001 /* TimerUseCase.swift in Sources */,
+				AAA00012001 /* TaskUseCase.swift in Sources */,
+				AAA00013001 /* SettingsUseCase.swift in Sources */,
+				AAA00014001 /* SystemTimerAdapter.swift in Sources */,
+				AAA00015001 /* UserNotificationAdapter.swift in Sources */,
+				AAA00016001 /* SystemSoundAdapter.swift in Sources */,
+				AAA00017001 /* UserDefaultsSettingsAdapter.swift in Sources */,
+				AAA00018001 /* UserDefaultsTaskAdapter.swift in Sources */,
+				AAA00019001 /* UserDefaultsStatisticsAdapter.swift in Sources */,
+				AAA00020001 /* DependencyContainer.swift in Sources */,
+				AAA00021001 /* TimerViewModel.swift in Sources */,
+				AAA00022001 /* SettingsViewModel.swift in Sources */,
+				AAA00023001 /* TaskViewModel.swift in Sources */,
+				AAA00024001 /* MenuBarView.swift in Sources */,
+				AAA00025001 /* TaskListView.swift in Sources */,
+				AAA00026001 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AAAB0000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAAB0001000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AAAB0002000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pompom/Pompom.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pompom/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pompom.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AAAB0003000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pompom/Pompom.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pompom/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pompom.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAAC0000000 /* Build configuration list for PBXProject "Pompom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAB0000000 /* Debug */,
+				AAAB0001000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAAC0002000 /* Build configuration list for PBXNativeTarget "Pompom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAB0002000 /* Debug */,
+				AAAB0003000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAAP0000000 /* Project object */;
+}
