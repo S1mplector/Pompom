@@ -30,35 +30,9 @@
 		AAA00021001 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00021000 /* TimerViewModel.swift */; };
 		AAA00022001 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00022000 /* SettingsViewModel.swift */; };
 		AAA00023001 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00023000 /* TaskViewModel.swift */; };
-		AAA00029001 /* SessionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00029000 /* SessionHistory.swift */; };
-		AAA00030001 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00030000 /* AppTheme.swift */; };
-		AAA00031001 /* FocusModePort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00031000 /* FocusModePort.swift */; };
-		AAA00032001 /* HistoryPersistencePort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00032000 /* HistoryPersistencePort.swift */; };
-		AAA00033001 /* FocusModeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00033000 /* FocusModeAdapter.swift */; };
-		AAA00034001 /* KeyboardShortcutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00034000 /* KeyboardShortcutService.swift */; };
-		AAA00035001 /* UserDefaultsHistoryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00035000 /* UserDefaultsHistoryAdapter.swift */; };
-		AAA00036001 /* AppIconGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00036000 /* AppIconGenerator.swift */; };
-		AAA00037001 /* AppLifecycleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00037000 /* AppLifecycleManager.swift */; };
-		AAA00038001 /* DataExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00038000 /* DataExportService.swift */; };
-		AAA00039001 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00039000 /* ErrorHandler.swift */; };
-		AAA00040001 /* AccessibilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00040000 /* AccessibilityExtensions.swift */; };
-		AAA00041001 /* ValidationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00041000 /* ValidationExtensions.swift */; };
-		AAA00042001 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00042000 /* ViewModifiers.swift */; };
-		AAA00043001 /* EnhancedMenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00043000 /* EnhancedMenuBarView.swift */; };
-		AAA00044001 /* EnhancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00044000 /* EnhancedSettingsView.swift */; };
-		AAA00045001 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00045000 /* CircularProgressView.swift */; };
-		AAA00046001 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00046000 /* ConfettiView.swift */; };
-		AAA00047001 /* ControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00047000 /* ControlButton.swift */; };
-		AAA00048001 /* DailyProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00048000 /* DailyProgressView.swift */; };
-		AAA00049001 /* MiniModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00049000 /* MiniModeView.swift */; };
-		AAA00050001 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00050000 /* OnboardingView.swift */; };
-		AAA00051001 /* ProductivityInsights.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00051000 /* ProductivityInsights.swift */; };
-		AAA00052001 /* QuickAddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00052000 /* QuickAddTask.swift */; };
-		AAA00053001 /* SessionTypeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00053000 /* SessionTypeSelector.swift */; };
-		AAA00054001 /* SmartBreakSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00054000 /* SmartBreakSuggestion.swift */; };
-		AAA00055001 /* TaskEditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00055000 /* TaskEditSheet.swift */; };
-		AAA00056001 /* TaskRowEnhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00056000 /* TaskRowEnhanced.swift */; };
-		AAA00057001 /* ProductivityChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00057000 /* ProductivityChartsView.swift */; };
+		AAA00024001 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00024000 /* MenuBarView.swift */; };
+		AAA00025001 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00025000 /* TaskListView.swift */; };
+		AAA00026001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00026000 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,37 +60,11 @@
 		AAA00021000 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		AAA00022000 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		AAA00023000 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		AAA00024000 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		AAA00025000 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		AAA00026000 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AAA00027000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA00028000 /* Pompom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pompom.entitlements; sourceTree = "<group>"; };
-		AAA00029000 /* SessionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistory.swift; sourceTree = "<group>"; };
-		AAA00030000 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
-		AAA00031000 /* FocusModePort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModePort.swift; sourceTree = "<group>"; };
-		AAA00032000 /* HistoryPersistencePort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPersistencePort.swift; sourceTree = "<group>"; };
-		AAA00033000 /* FocusModeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeAdapter.swift; sourceTree = "<group>"; };
-		AAA00034000 /* KeyboardShortcutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutService.swift; sourceTree = "<group>"; };
-		AAA00035000 /* UserDefaultsHistoryAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHistoryAdapter.swift; sourceTree = "<group>"; };
-		AAA00036000 /* AppIconGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconGenerator.swift; sourceTree = "<group>"; };
-		AAA00037000 /* AppLifecycleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifecycleManager.swift; sourceTree = "<group>"; };
-		AAA00038000 /* DataExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExportService.swift; sourceTree = "<group>"; };
-		AAA00039000 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
-		AAA00040000 /* AccessibilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityExtensions.swift; sourceTree = "<group>"; };
-		AAA00041000 /* ValidationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationExtensions.swift; sourceTree = "<group>"; };
-		AAA00042000 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
-		AAA00043000 /* EnhancedMenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedMenuBarView.swift; sourceTree = "<group>"; };
-		AAA00044000 /* EnhancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedSettingsView.swift; sourceTree = "<group>"; };
-		AAA00045000 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		AAA00046000 /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
-		AAA00047000 /* ControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButton.swift; sourceTree = "<group>"; };
-		AAA00048000 /* DailyProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyProgressView.swift; sourceTree = "<group>"; };
-		AAA00049000 /* MiniModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniModeView.swift; sourceTree = "<group>"; };
-		AAA00050000 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		AAA00051000 /* ProductivityInsights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityInsights.swift; sourceTree = "<group>"; };
-		AAA00052000 /* QuickAddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddTask.swift; sourceTree = "<group>"; };
-		AAA00053000 /* SessionTypeSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTypeSelector.swift; sourceTree = "<group>"; };
-		AAA00054000 /* SmartBreakSuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartBreakSuggestion.swift; sourceTree = "<group>"; };
-		AAA00055000 /* TaskEditSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditSheet.swift; sourceTree = "<group>"; };
-		AAA00056000 /* TaskRowEnhanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowEnhanced.swift; sourceTree = "<group>"; };
-		AAA00057000 /* ProductivityChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityChartsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +124,6 @@
 			children = (
 				AAA00003000 /* PomodoroSession.swift */,
 				AAA00004000 /* Task.swift */,
-				AAA00029000 /* SessionHistory.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -186,7 +133,6 @@
 			children = (
 				AAA00005000 /* TimerSettings.swift */,
 				AAA00006000 /* SessionStatistics.swift */,
-				AAA00030000 /* AppTheme.swift */,
 			);
 			path = ValueObjects;
 			sourceTree = "<group>";
@@ -198,8 +144,6 @@
 				AAA00008000 /* NotificationPort.swift */,
 				AAA00009000 /* SoundPort.swift */,
 				AAA00010000 /* PersistencePort.swift */,
-				AAA00031000 /* FocusModePort.swift */,
-				AAA00032000 /* HistoryPersistencePort.swift */,
 			);
 			path = Ports;
 			sourceTree = "<group>";
@@ -227,7 +171,6 @@
 			children = (
 				AAA00020000 /* DependencyContainer.swift */,
 				AAAG0010000 /* Adapters */,
-				AAAG0011000 /* Services */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -241,22 +184,8 @@
 				AAA00017000 /* UserDefaultsSettingsAdapter.swift */,
 				AAA00018000 /* UserDefaultsTaskAdapter.swift */,
 				AAA00019000 /* UserDefaultsStatisticsAdapter.swift */,
-				AAA00033000 /* FocusModeAdapter.swift */,
-				AAA00034000 /* KeyboardShortcutService.swift */,
-				AAA00035000 /* UserDefaultsHistoryAdapter.swift */,
 			);
 			path = Adapters;
-			sourceTree = "<group>";
-		};
-		AAAG0011000 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				AAA00036000 /* AppIconGenerator.swift */,
-				AAA00037000 /* AppLifecycleManager.swift */,
-				AAA00038000 /* DataExportService.swift */,
-				AAA00039000 /* ErrorHandler.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		AAAG0012000 /* Presentation */ = {
@@ -264,7 +193,6 @@
 			children = (
 				AAAG0013000 /* ViewModels */,
 				AAAG0014000 /* Views */,
-				AAAG0016000 /* Extensions */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -282,41 +210,11 @@
 		AAAG0014000 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AAA00043000 /* EnhancedMenuBarView.swift */,
-				AAA00044000 /* EnhancedSettingsView.swift */,
-				AAAG0015000 /* Components */,
+				AAA00024000 /* MenuBarView.swift */,
+				AAA00025000 /* TaskListView.swift */,
+				AAA00026000 /* SettingsView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		AAAG0015000 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				AAA00045000 /* CircularProgressView.swift */,
-				AAA00046000 /* ConfettiView.swift */,
-				AAA00047000 /* ControlButton.swift */,
-				AAA00048000 /* DailyProgressView.swift */,
-				AAA00049000 /* MiniModeView.swift */,
-				AAA00050000 /* OnboardingView.swift */,
-				AAA00051000 /* ProductivityInsights.swift */,
-				AAA00052000 /* QuickAddTask.swift */,
-				AAA00053000 /* SessionTypeSelector.swift */,
-				AAA00054000 /* SmartBreakSuggestion.swift */,
-				AAA00055000 /* TaskEditSheet.swift */,
-				AAA00056000 /* TaskRowEnhanced.swift */,
-				AAA00057000 /* ProductivityChartsView.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		AAAG0016000 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				AAA00040000 /* AccessibilityExtensions.swift */,
-				AAA00041000 /* ValidationExtensions.swift */,
-				AAA00042000 /* ViewModifiers.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,16 +289,12 @@
 				AAA00001001 /* PompomApp.swift in Sources */,
 				AAA00003001 /* PomodoroSession.swift in Sources */,
 				AAA00004001 /* Task.swift in Sources */,
-				AAA00029001 /* SessionHistory.swift in Sources */,
 				AAA00005001 /* TimerSettings.swift in Sources */,
 				AAA00006001 /* SessionStatistics.swift in Sources */,
-				AAA00030001 /* AppTheme.swift in Sources */,
 				AAA00007001 /* TimerPort.swift in Sources */,
 				AAA00008001 /* NotificationPort.swift in Sources */,
 				AAA00009001 /* SoundPort.swift in Sources */,
 				AAA00010001 /* PersistencePort.swift in Sources */,
-				AAA00031001 /* FocusModePort.swift in Sources */,
-				AAA00032001 /* HistoryPersistencePort.swift in Sources */,
 				AAA00011001 /* TimerUseCase.swift in Sources */,
 				AAA00012001 /* TaskUseCase.swift in Sources */,
 				AAA00013001 /* SettingsUseCase.swift in Sources */,
@@ -410,35 +304,13 @@
 				AAA00017001 /* UserDefaultsSettingsAdapter.swift in Sources */,
 				AAA00018001 /* UserDefaultsTaskAdapter.swift in Sources */,
 				AAA00019001 /* UserDefaultsStatisticsAdapter.swift in Sources */,
-				AAA00033001 /* FocusModeAdapter.swift in Sources */,
-				AAA00034001 /* KeyboardShortcutService.swift in Sources */,
-				AAA00035001 /* UserDefaultsHistoryAdapter.swift in Sources */,
 				AAA00020001 /* DependencyContainer.swift in Sources */,
-				AAA00036001 /* AppIconGenerator.swift in Sources */,
-				AAA00037001 /* AppLifecycleManager.swift in Sources */,
-				AAA00038001 /* DataExportService.swift in Sources */,
-				AAA00039001 /* ErrorHandler.swift in Sources */,
 				AAA00021001 /* TimerViewModel.swift in Sources */,
 				AAA00022001 /* SettingsViewModel.swift in Sources */,
 				AAA00023001 /* TaskViewModel.swift in Sources */,
-				AAA00040001 /* AccessibilityExtensions.swift in Sources */,
-				AAA00041001 /* ValidationExtensions.swift in Sources */,
-				AAA00042001 /* ViewModifiers.swift in Sources */,
-				AAA00043001 /* EnhancedMenuBarView.swift in Sources */,
-				AAA00044001 /* EnhancedSettingsView.swift in Sources */,
-				AAA00045001 /* CircularProgressView.swift in Sources */,
-				AAA00046001 /* ConfettiView.swift in Sources */,
-				AAA00047001 /* ControlButton.swift in Sources */,
-				AAA00048001 /* DailyProgressView.swift in Sources */,
-				AAA00049001 /* MiniModeView.swift in Sources */,
-				AAA00050001 /* OnboardingView.swift in Sources */,
-				AAA00051001 /* ProductivityInsights.swift in Sources */,
-				AAA00052001 /* QuickAddTask.swift in Sources */,
-				AAA00053001 /* SessionTypeSelector.swift in Sources */,
-				AAA00054001 /* SmartBreakSuggestion.swift in Sources */,
-				AAA00055001 /* TaskEditSheet.swift in Sources */,
-				AAA00056001 /* TaskRowEnhanced.swift in Sources */,
-				AAA00057001 /* ProductivityChartsView.swift in Sources */,
+				AAA00024001 /* MenuBarView.swift in Sources */,
+				AAA00025001 /* TaskListView.swift in Sources */,
+				AAA00026001 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
