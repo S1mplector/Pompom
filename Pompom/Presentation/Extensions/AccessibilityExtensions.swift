@@ -54,7 +54,7 @@ extension View {
             .accessibilityLabel(label)
             .accessibilityHint(hint ?? "")
             .accessibilityAddTraits(.isButton)
-            .accessibilityRemoveTraits(isEnabled ? [] : .isEnabled)
+            .disabled(!isEnabled)
     }
     
     func statisticAccessibility(
