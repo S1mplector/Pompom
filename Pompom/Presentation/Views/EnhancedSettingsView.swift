@@ -51,7 +51,7 @@ struct TimerSettingsPane: View {
                     TimerDurationRow(
                         title: "Work Duration",
                         value: $settingsViewModel.workMinutes,
-                        range: 1...90,
+                        range: 5...90,
                         icon: "brain.head.profile",
                         color: .red
                     )
@@ -59,7 +59,7 @@ struct TimerSettingsPane: View {
                     TimerDurationRow(
                         title: "Short Break",
                         value: $settingsViewModel.shortBreakMinutes,
-                        range: 1...30,
+                        range: 5...30,
                         icon: "cup.and.saucer.fill",
                         color: .green
                     )
@@ -132,7 +132,7 @@ struct TimerDurationRow: View {
                     .frame(width: 60, alignment: .trailing)
             }
             
-            Slider(value: $value, in: range, step: 1)
+            Slider(value: $value, in: range, step: 5)
                 .tint(color)
         }
     }

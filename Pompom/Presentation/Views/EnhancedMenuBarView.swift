@@ -64,7 +64,7 @@ struct EnhancedMenuBarView: View {
                             StatsTabView()
                         }
                     }
-                    .frame(maxWidth: .infinity)
+                    .frame(maxWidth: .infinity, minHeight: 320, maxHeight: 320)
                     .transition(.opacity.combined(with: .scale(scale: 0.98)))
                     
                     Divider()
