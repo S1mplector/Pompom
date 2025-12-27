@@ -24,12 +24,22 @@ struct ProductivityChartsView: View {
     var body: some View {
         VStack(spacing: 16) {
             // Time range picker
-            Picker("Time Range", selection: $selectedTimeRange) {
-                ForEach(TimeRange.allCases, id: \.self) { range in
-                    Text(range.rawValue).tag(range)
+            HStack {
+                Text("Time Range")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                
+                Spacer()
+                
+                Picker("Time Range", selection: $selectedTimeRange) {
+                    ForEach(TimeRange.allCases, id: \.self) { range in
+                        Text(range.rawValue).tag(range)
+                    }
                 }
+                .pickerStyle(.segmented)
+                .labelsHidden()
+                .fixedSize()
             }
-            .pickerStyle(.segmented)
             .padding(.horizontal)
             
             // Sessions chart

@@ -1,12 +1,12 @@
 # Pompom - macOS Pomodoro Timer
 
-A beautiful native macOS menu bar Pomodoro timer app built with SwiftUI using **Hexagonal Architecture**.
+A native macOS menu bar Pomodoro timer app built with SwiftUI honoring the **Hexagonal Architecture**.
 
 ![macOS 14.0+](https://img.shields.io/badge/macOS-14.0+-blue)
 ![Swift 5.9+](https://img.shields.io/badge/Swift-5.9+-orange)
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-✓-green)
 
-## ✨ Features
+## Features
 
 ### Timer
 - **Pomodoro Timer** - Work sessions (25 min), short breaks (5 min), long breaks (15 min)
@@ -52,7 +52,7 @@ A beautiful native macOS menu bar Pomodoro timer app built with SwiftUI using **
 | `⌃⌘→` | Skip to next session |
 | `⌃⌘R` | Reset current session |
 
-## 🏗 Architecture
+## Architecture
 
 This project follows **Hexagonal Architecture** (Ports & Adapters) with a highly layered approach honoring the **Single Responsibility Principle**.
 
@@ -137,13 +137,13 @@ Pompom/
 
 4. **Dependency Injection** - `DependencyContainer` wires everything together, making testing and swapping implementations easy.
 
-## 📋 Requirements
+## Requirements
 
 - macOS 14.0+
 - Xcode 15.0+
 - Swift 5.9+
 
-## 🚀 Building
+## Building
 
 ### Option 1: Xcode (Recommended)
 ```bash
@@ -171,7 +171,7 @@ xcodebuild -project Pompom.xcodeproj \
   archive
 ```
 
-## 📖 Usage
+## Usage
 
 1. **Launch** - The app appears in your menu bar
 2. **Start Timer** - Click the menu bar icon and press play
@@ -190,10 +190,8 @@ xcodebuild -project Pompom.xcodeproj \
 | Forest Green | Calming green palette |
 | Ocean Blue | Cool blue aesthetics |
 
-## 📄 License
+## License
 
 MIT License
 
 ---
-
-Made with ❤️ using SwiftUI

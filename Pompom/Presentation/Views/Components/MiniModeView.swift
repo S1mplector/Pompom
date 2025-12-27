@@ -50,7 +50,7 @@ struct MiniModeView: View {
                 
                 Button {
                     withAnimation(.spring(response: 0.3)) {
-                        isExpanded = true
+                        isExpanded = false
                     }
                 } label: {
                     Image(systemName: "arrow.up.left.and.arrow.down.right")

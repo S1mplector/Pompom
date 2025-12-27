@@ -9,7 +9,6 @@ struct TaskRowEnhanced: View {
     let onEdit: () -> Void
     
     @State private var isHovered = false
-    @State private var showDeleteConfirm = false
     
     var body: some View {
         HStack(spacing: 12) {
@@ -39,7 +38,7 @@ struct TaskRowEnhanced: View {
             if isHovered && !task.isCompleted {
                 HStack(spacing: 4) {
                     IconButton(icon: "pencil", color: .blue, action: onEdit)
-                    IconButton(icon: "trash", color: .red, action: { showDeleteConfirm = true })
+                    IconButton(icon: "trash", color: .red, action: onDelete)
                 }
                 .transition(.opacity.combined(with: .scale(scale: 0.8)))
             }
@@ -55,21 +54,17 @@ struct TaskRowEnhanced: View {
                 )
         )
         .contentShape(Rectangle())
-        .onTapGesture {
-            if !task.isCompleted {
-                onSelect()
+        .simultaneousGesture(
+            TapGesture().onEnded {
+                if !task.isCompleted {
+                    onSelect()
+                }
             }
-        }
+        )
         .onHover { hovering in
             withAnimation(.easeInOut(duration: 0.15)) {
                 isHovered = hovering
             }
-        }
-        .alert("Delete Task", isPresented: $showDeleteConfirm) {
-            Button("Cancel", role: .cancel) {}
-            Button("Delete", role: .destructive, action: onDelete)
-        } message: {
-            Text("Are you sure you want to delete '\(task.title)'?")
         }
     }
     

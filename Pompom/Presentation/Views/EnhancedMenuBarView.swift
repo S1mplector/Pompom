@@ -64,7 +64,7 @@ struct EnhancedMenuBarView: View {
                             StatsTabView()
                         }
                     }
-                    .frame(maxWidth: .infinity, minHeight: 320, maxHeight: 320)
+                    .frame(maxWidth: .infinity, minHeight: 340, maxHeight: 380)
                     .transition(.opacity.combined(with: .scale(scale: 0.98)))
                     
                     Divider()
@@ -248,7 +248,7 @@ struct TimerTabView: View {
             ZStack {
                 if timerViewModel.isRunning {
                     PulsingCircle(color: timerViewModel.sessionColor)
-                        .frame(width: 220, height: 220)
+                        .frame(width: 180, height: 180)
                 }
                 
                 CircularProgressView(
@@ -256,6 +256,7 @@ struct TimerTabView: View {
                     color: timerViewModel.sessionColor,
                     lineWidth: 10
                 )
+                .frame(width: 180, height: 180)
                 
                 VStack(spacing: 4) {
                     AnimatedTimerText(
@@ -430,7 +431,7 @@ struct TasksTabView: View {
             
             // Task list
             if taskViewModel.tasks.isEmpty && !taskViewModel.isAddingTask {
-                EmptyTasksView(onQuickAdd: { showQuickAdd = true })
+                EmptyTasksView()
             } else {
                 ScrollView {
                     LazyVStack(spacing: 8) {
@@ -557,15 +558,12 @@ struct EmptyTasksView: View {
                 Button {
                     onQuickAdd()
                 } label: {
-                    HStack(spacing: 6) {
-                        Image(systemName: "sparkles")
-                        Text("Quick Add")
-                    }
-                    .font(.caption)
-                    .fontWeight(.medium)
+                    Image(systemName: "plus")
+                        .font(.body)
+                        .fontWeight(.semibold)
                 }
                 .buttonStyle(.borderedProminent)
-                .controlSize(.small)
+                .controlSize(.regular)
             }
         }
         .frame(maxWidth: .infinity)
@@ -620,8 +618,12 @@ struct AddTaskForm: View {
                     .font(.caption)
                     .foregroundColor(.secondary)
                     
-                    Button("Add") {
+                    Button {
                         taskViewModel.addTask()
+                    } label: {
+                        Text("Add")
+                            .font(.caption)
+                            .fontWeight(.medium)
                     }
                     .buttonStyle(.borderedProminent)
                     .controlSize(.small)
