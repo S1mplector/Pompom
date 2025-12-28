@@ -76,6 +76,7 @@ struct EnhancedMenuBarView: View {
             }
             .padding()
             .frame(width: 340)
+            .clipped()
             .animation(.spring(response: 0.35, dampingFraction: 0.85), value: selectedTab)
             .animation(.spring(response: 0.3), value: isCompactMode)
             

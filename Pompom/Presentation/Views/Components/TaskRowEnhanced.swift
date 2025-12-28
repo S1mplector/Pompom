@@ -53,14 +53,11 @@ struct TaskRowEnhanced: View {
                         .stroke(isSelected ? Color.accentColor.opacity(0.5) : Color.clear, lineWidth: 1.5)
                 )
         )
-        .contentShape(Rectangle())
-        .simultaneousGesture(
-            TapGesture().onEnded {
-                if !task.isCompleted {
-                    onSelect()
-                }
+        .onTapGesture {
+            if !task.isCompleted {
+                onSelect()
             }
-        )
+        }
         .onHover { hovering in
             withAnimation(.easeInOut(duration: 0.15)) {
                 isHovered = hovering
@@ -85,25 +82,26 @@ struct CheckboxButton: View {
     @State private var isHovered = false
     
     var body: some View {
-        Button(action: action) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 6)
-                    .fill(isChecked ? Color.green : Color.clear)
-                    .frame(width: 22, height: 22)
-                
-                RoundedRectangle(cornerRadius: 6)
-                    .stroke(isChecked ? Color.green : Color.secondary.opacity(0.5), lineWidth: 1.5)
-                    .frame(width: 22, height: 22)
-                
-                if isChecked {
-                    Image(systemName: "checkmark")
-                        .font(.system(size: 12, weight: .bold))
-                        .foregroundColor(.white)
-                }
+        ZStack {
+            RoundedRectangle(cornerRadius: 6)
+                .fill(isChecked ? Color.green : Color.clear)
+                .frame(width: 22, height: 22)
+            
+            RoundedRectangle(cornerRadius: 6)
+                .stroke(isChecked ? Color.green : Color.secondary.opacity(0.5), lineWidth: 1.5)
+                .frame(width: 22, height: 22)
+            
+            if isChecked {
+                Image(systemName: "checkmark")
+                    .font(.system(size: 12, weight: .bold))
+                    .foregroundColor(.white)
             }
-            .scaleEffect(isHovered ? 1.1 : 1.0)
         }
-        .buttonStyle(.plain)
+        .scaleEffect(isHovered ? 1.1 : 1.0)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            action()
+        }
         .onHover { hovering in
             withAnimation(.spring(response: 0.2)) {
                 isHovered = hovering

@@ -1,6 +1,6 @@
 # Pompom - macOS Pomodoro Timer
 
-A native macOS menu bar Pomodoro timer app built with SwiftUI honoring the **Hexagonal Architecture**.
+A native macOS menu bar Pomodoro timer app built with SwiftUI. 
 
 ![macOS 14.0+](https://img.shields.io/badge/macOS-14.0+-blue)
 ![Swift 5.9+](https://img.shields.io/badge/Swift-5.9+-orange)
