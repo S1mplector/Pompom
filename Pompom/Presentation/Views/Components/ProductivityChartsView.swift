@@ -355,33 +355,23 @@ struct StreakIndicator: View {
     
     var body: some View {
         HStack(spacing: 16) {
-            VStack(spacing: 4) {
-                HStack(spacing: 4) {
-                    Image(systemName: "flame.fill")
-                        .foregroundColor(.orange)
-                    Text("\(currentStreak)")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                }
-                Text("Current")
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
+            HStack(spacing: 4) {
+                Image(systemName: "flame.fill")
+                    .foregroundColor(.orange)
+                Text("\(currentStreak)")
+                    .font(.title2)
+                    .fontWeight(.bold)
             }
             
             Divider()
-                .frame(height: 40)
+                .frame(height: 24)
             
-            VStack(spacing: 4) {
-                HStack(spacing: 4) {
-                    Image(systemName: "trophy.fill")
-                        .foregroundColor(.yellow)
-                    Text("\(longestStreak)")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                }
-                Text("Best")
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
+            HStack(spacing: 4) {
+                Image(systemName: "trophy.fill")
+                    .foregroundColor(.yellow)
+                Text("\(longestStreak)")
+                    .font(.title2)
+                    .fontWeight(.bold)
             }
         }
         .padding()
