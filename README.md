@@ -1,4 +1,4 @@
-# Pompom - macOS Pomodoro Timer
+# Pompom
 
 A native macOS menu bar Pomodoro timer app built with SwiftUI. 
 
